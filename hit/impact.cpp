@@ -11,12 +11,6 @@ void Impact::setup(float pos_x, float pos_y, float size_x, float size_y, float r
 	radius_buffer = radius;
 }
 
-//Impactが動くときの処理
-void Impact::update()
-{
-
-}
-
 //判定される範囲をワイヤーで描写します。(ヒットしたら赤、ヒットなしで青)
 void Impact::draw(int thick)
 {	

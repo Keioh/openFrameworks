@@ -16,7 +16,7 @@ public:
 	float radius_buffer;//半径
 
 	void setup(float pos_x, float pos_y, float size_x = 0, float size_y = 0, float radius = -1);//当たり判定の初期化(pos_x,posyは判定開始位置、size_x,size_yは判定の大きさ,radiusが-1の時は判定をBOXに0以上の時はCIRCLE判定になります。
-	void update();//Impactが動くときの処理
+	virtual void update() {};//Impactが動くときの処理
 	void draw(int thick = 2);//判定される範囲をワイヤーで描写します。ヒットしたら赤、ヒットなしで青。(線の太さは初期で2)
 
 	void mouseMovedUpdate(int x, int y);//ofApp::mouseMoved(int x,int y)の中に記述する。マウスを動かしたときにヒット判定をさせる処理。
