@@ -1,0 +1,53 @@
+#include "header\object.h"
+
+
+//初期化処理(xの初期位置,yの初期位置,画像への相対パス,円の場合は半径を入力)
+void Object::setup(float pos_x, float pos_y, char* path, float radius)
+{
+	graphics.load(path);//画像読み込み
+	position_x = pos_x;
+	position_y = pos_y;
+
+	object_impact.setup(pos_x, pos_y, graphics.getWidth(), graphics.getHeight(), radius);//当たり判定
+}
+
+//描写
+void Object::draw(bool wire)
+{
+	if (object_impact.hit == true)//ヒットしてたら画像を少し明るく表示する
+	{
+		if (object_impact.click == true) //ヒットかつクリックしていたらさらに明るく表示する。
+		{ 
+			ofSetColor(255, 255, 255); 
+		}
+		else
+		{
+			ofSetColor(235, 235, 235);
+		}
+	}
+	else
+	{
+		ofSetColor(200, 200, 200);//ヒットしていなかったら暗く表示する。
+	}
+
+	graphics.draw(position_x,position_y);//画像の表示
+	if (wire == true)object_impact.draw();//当たり判定のワイヤーを表示
+}
+
+//ofApp::mouseMoved(int x,int y)の中に記述する。マウスを動かしたときにヒット判定をさせる処理
+void Object::mouseMovedUpdate(int x, int y)
+{
+	object_impact.mouseMovedUpdate(x, y);//当たり判定
+}
+
+//ofApp::mousePressedUpdate(int x, int y, int button)の中に記述する。マウスがヒットしているときにボタンを押したときの処理。
+void Object::mousePressedUpdate(int x, int y, int button, int kind_button)
+{
+	object_impact.mousePressedUpdate(x, y, button, kind_button);//当たり判定
+}
+
+//ofApp::mouseReleasedUpdate(int x, int y, int button)の中に記述する。マウスがヒットしているときにボタンを離したときの処理。
+void Object::mouseReleasedUpdate(int x, int y, int button, int kind_button)
+{
+	object_impact.mouseReleasedUpdate(x, y, button, kind_button);//当たり判定
+}
