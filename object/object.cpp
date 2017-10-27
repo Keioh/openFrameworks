@@ -5,16 +5,19 @@
 void Object::setup(float pos_x, float pos_y, char* path, float radius)
 {
 	graphics.load(path);//画像読み込み
-	position_x = pos_x;
-	position_y = pos_y;
+	position_x = graphics_position_x = pos_x;
+	position_y = graphics_position_y = pos_y;
 	
 	Impact::setup(position_x, position_y, graphics.getWidth(), graphics.getHeight(), radius);//当たり判定
 }
 
 //アニメーション処理。
-void Object::update()
+void Object::update(float moved_x, float moved_y, float rate)
 {
+	position_x = (moved_x * rate) + graphics_position_x;//画像をx方向に移動させる。
+	position_y = (moved_y * rate) + graphics_position_y;//画像をy方向に移動させる。
 
+	Impact::update((moved_x * rate) + graphics_position_x, (moved_y * rate) + graphics_position_y);//ヒットボックスを移動させる。
 }
 
 //描写

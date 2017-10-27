@@ -11,10 +11,16 @@ void Impact::setup(float pos_x, float pos_y, float size_x, float size_y, float r
 	radius_buffer = radius;
 }
 
+//Impactが動くときの処理
+void Impact::update(float moved_x, float moved_y)
+{
+	position_x = moved_x;//position_xに動いた量を足す。
+	position_y = moved_y;//position_yに動いた量を足す。
+}
+
 //判定される範囲をワイヤーで描写します。(ヒットしたら赤、ヒットなしで青)
 void Impact::draw(int thick)
 {	
-
 	if(hit == true)//色の変更
 	{
 		if (click == true)//クリックされていたら
