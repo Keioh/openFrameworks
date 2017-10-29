@@ -2,6 +2,9 @@
 
 void Logo_anime::setup(float pos_x, float pos_y, float alpha_speed)
 {
+	anime_x = -25;//アニメーション開始位置をずらす。
+	speed_x = 0.2f;//アニメーションのスピードを0.2fに設定
+
 	alpha_blend_speed = alpha_speed;//alpha_speedをalpha_blend_speedに代入
 
 	//画像をロード
@@ -18,11 +21,13 @@ void Logo_anime::update(float next_time_count)
 {
 	if (logo_D.alpha >= 255)//logo_Dのα値が255以上になったら
 	{
+		speed_x = 0;//アニメーションのスピードを0.0fにする
 		time++;//時間を増やす。
 	}
 
 	if (time > next_time_count)//時間がある一定以上になったら
 	{
+		speed_x = 0.2f;//アニメーションのスピードを再び0.2fにする。
 		//それぞれのα値をalpha_speedの二倍減らす。(なぜ2倍かというと、元の増加量と相殺するためです。)
 		logo_D.alpha -= alpha_blend_speed * 2;
 		logo_d.alpha -= alpha_blend_speed * 2;
@@ -33,14 +38,17 @@ void Logo_anime::update(float next_time_count)
 		logo_p.alpha -= alpha_blend_speed * 2;
 	}
 
-	//それぞれアップデート
-	logo_D.update();
-	logo_d.update();
-	logo_i.update();
-	logo_i_2.update();
-	logo_l.update();
-	logo_o.update();
-	logo_p.update();
+	anime_x += speed_x;//アニメーションのスピードをアニメーション開始位置に足す。
+	
+
+	//それぞれ座標をアップデート
+	logo_D.update(anime_x);
+	logo_d.update(anime_x);
+	logo_i.update(anime_x);
+	logo_i_2.update(anime_x);
+	logo_l.update(anime_x);
+	logo_o.update(anime_x);
+	logo_p.update(anime_x);
 }
 
 void Logo_anime::draw(bool wire)
