@@ -36,7 +36,14 @@ void Logo_anime::update(float next_time_count)
 		logo_l.alpha -= alpha_blend_speed * 2;
 		logo_o.alpha -= alpha_blend_speed * 2;
 		logo_p.alpha -= alpha_blend_speed * 2;
+
+		if (logo_D.alpha <= 0)
+		{
+			speed_x = 0.0f;//アニメーションのスピードを0.0fにする
+		}
 	}
+
+
 
 	anime_x += speed_x;//アニメーションのスピードをアニメーション開始位置に足す。
 	
