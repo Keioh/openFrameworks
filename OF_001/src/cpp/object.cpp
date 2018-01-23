@@ -12,7 +12,7 @@ void Object::setup(float pos_x, float pos_y, char* path, float alpha_speed, floa
 	{ 
 		alpha = 255;
 	}
-	else 
+	else
 	{
 		alpha = 0;
 	}
@@ -25,12 +25,13 @@ void Object::setup(float pos_x, float pos_y, char* path, float alpha_speed, floa
 void Object::update(float moved_x, float moved_y, float rate)
 {
 	alpha += a_speed;
-	if (alpha > 255)alpha = 255;
+	if (alpha >= 255)alpha = 255;
+	if (alpha <= 0)alpha = 0;
 
 	position_x = (moved_x * rate) + graphics_position_x;//画像をx方向に移動させる。
 	position_y = (moved_y * rate) + graphics_position_y;//画像をy方向に移動させる。
 
-	Impact::update((moved_x * rate) + graphics_position_x, (moved_y * rate) + graphics_position_y);//ヒットボックスを移動させる。
+	Impact::update(position_x, position_y);//ヒットボックスを移動させる。
 }
 
 //描写
@@ -56,7 +57,6 @@ void Object::draw(bool wire)
 
 	graphics.draw(position_x,position_y);//画像の表示
 	if (wire == true)Impact::draw();//当たり判定のワイヤーを表示
-
 }
 
 //ofApp::mouseMoved(int x,int y)の中に記述する。マウスを動かしたときにヒット判定をさせる処理
