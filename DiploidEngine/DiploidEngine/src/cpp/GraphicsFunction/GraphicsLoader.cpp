@@ -1,6 +1,6 @@
 #include "GraphicsFunction/GraphicsLoader.h"
 
-bool GraphicsLoader::load(const char* path)
+void GraphicsLoader::load(const char* path)
 {
 	image.load(path);//‰æ‘œ‚ğ“Ç‚İ‚Ş
 

@@ -6,12 +6,12 @@ class GraphicsLoader
 private:
 
 public:
-	GraphicsLoader();
+	GraphicsLoader() {}
 
 	ofImage image;
 	float width;
 	float height;
 
-	bool load(const char* path);
+	void load(const char* path);
 
 };
