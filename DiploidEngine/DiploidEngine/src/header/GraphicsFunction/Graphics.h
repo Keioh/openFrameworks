@@ -3,22 +3,12 @@
 #include "ofMain.h"
 #include "GraphicsFunction/GraphicsLoader.h"
 
+
 class Graphics
 {
 private:
-	Graphics() = default;
-	~Graphics() = default;
 
 public:
-
-	//コピーコンストラクタ関係
-	Graphics(const Graphics&) = delete;
-	Graphics& operator=(const Graphics&) = delete;
-	
-	//ムーブコンストラクタ関係
-	Graphics(Graphics&&) = delete;
-	Graphics& operator=(Graphics&&) = delete;
-
-	static Graphics& GetInstans();
-
+	GraphicsLoader graphics_loader;//グラフィクスを読み込むクラス
+	int index;//グラフィクスがいくつロードされているか確認変数(-1でエラー、0で画像ロードなし、1以上あれば画像ロードあり)
 };

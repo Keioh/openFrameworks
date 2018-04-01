@@ -1,12 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
-#include "GraphicsFunction/GraphicsLoader.h"
+#include "GraphicsFunction/Graphics.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
-		GraphicsLoader test;
+		Graphics test;
 
 		void setup();
 		void update();
