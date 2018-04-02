@@ -11,7 +11,8 @@ public:
 	ofImage image;
 	float width;
 	float height;
+	bool image_flag;
 
-	void load(const char* path);
+	bool load(const char* path);
 
 };

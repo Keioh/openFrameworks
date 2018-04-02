@@ -9,6 +9,9 @@ class Graphics
 private:
 
 public:
-	GraphicsLoader graphics_loader;//グラフィクスを読み込むクラス
-	int index;//グラフィクスがいくつロードされているか確認変数(-1でエラー、0で画像ロードなし、1以上あれば画像ロードあり)
+	list<GraphicsLoader> graphics_loader_list;//グラフィクスを読み込むクラス
+	//list<GraphicsLoader>::iterator loader_iterator = graphics_loader_list.begin();//イテレーターを取得
+	GraphicsLoader graphics_loader;
+
+	void GraphicsLoaderPush();
 };
