@@ -37,6 +37,15 @@
     <ClCompile Include="src\cpp\GraphicsFunction\GraphicsLoader.cpp">
       <Filter>src\cpp\GraphicsFunction</Filter>
     </ClCompile>
+    <ClCompile Include="src\cpp\ObjectFuction\object.cpp">
+      <Filter>src\cpp\ObjectFuction</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpp\ImpactFuction\impact.cpp">
+      <Filter>src\cpp\ImpactFuction</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpp\GameObject\logo_anime\logo_anime.cpp">
+      <Filter>src\cpp\GameObject\logo_anime</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -62,6 +71,30 @@
     </Filter>
     <Filter Include="src\header\GraphicsFunction">
       <UniqueIdentifier>{28a181ac-47bc-4385-ad10-33c6b205eda9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cpp\ObjectFuction">
+      <UniqueIdentifier>{3798fcf4-35cb-4718-ab03-cf2238beae76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\header\ObjectFuction">
+      <UniqueIdentifier>{355adcf3-4319-4041-af01-682d45382ccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\header\ImpactFuction">
+      <UniqueIdentifier>{4379d856-349d-44ef-bbbd-6e097dce6309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cpp\ImpactFuction">
+      <UniqueIdentifier>{0015b6b1-0192-472a-ba71-0d7f58ef307a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cpp\GameObject">
+      <UniqueIdentifier>{b97f1c00-3f75-453a-b853-d55d299c9bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\header\GameObject">
+      <UniqueIdentifier>{a97ae2b3-2b51-4311-a49e-9d9d773bb5d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cpp\GameObject\logo_anime">
+      <UniqueIdentifier>{3d72bb56-6009-4ed9-97e6-7821a7b9c3c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\header\GameObject\logo_anime">
+      <UniqueIdentifier>{cc18c233-aeff-48d5-b17a-7586a116dca1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +133,15 @@
     </ClInclude>
     <ClInclude Include="src\header\GraphicsFunction\GraphicsLoader.h">
       <Filter>src\header\GraphicsFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ObjectFuction\object.h">
+      <Filter>src\header\ObjectFuction</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ImpactFuction\impact.h">
+      <Filter>src\header\ImpactFuction</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\GameObject\logo_anime\logo_anime.h">
+      <Filter>src\header\GameObject\logo_anime</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

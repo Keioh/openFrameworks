@@ -1,12 +1,14 @@
 #pragma once
 
 #include "ofMain.h"
-#include "GraphicsFunction/Graphics.h"
+#include "GraphicsFunction\Graphics.h"
+#include "GameObject\logo_anime\logo_anime.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
 		Graphics test;
+		LogoAnime logo_anime;
 
 		void setup();
 		void update();

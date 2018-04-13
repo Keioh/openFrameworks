@@ -176,8 +176,11 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\cpp\GameObject\logo_anime\logo_anime.cpp" />
     <ClCompile Include="src\cpp\GraphicsFunction\Graphics.cpp" />
     <ClCompile Include="src\cpp\GraphicsFunction\GraphicsLoader.cpp" />
+    <ClCompile Include="src\cpp\ImpactFuction\impact.cpp" />
+    <ClCompile Include="src\cpp\ObjectFuction\object.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\Users\kou20\Desktop\ProgramingLibraly\opneFreamwork\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.cpp" />
@@ -190,8 +193,11 @@
     <ClCompile Include="..\..\..\Users\kou20\Desktop\ProgramingLibraly\opneFreamwork\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\header\GameObject\logo_anime\logo_anime.h" />
     <ClInclude Include="src\header\GraphicsFunction\Graphics.h" />
     <ClInclude Include="src\header\GraphicsFunction\GraphicsLoader.h" />
+    <ClInclude Include="src\header\ImpactFuction\impact.h" />
+    <ClInclude Include="src\header\ObjectFuction\object.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\Users\kou20\Desktop\ProgramingLibraly\opneFreamwork\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="..\..\..\Users\kou20\Desktop\ProgramingLibraly\opneFreamwork\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.h" />
