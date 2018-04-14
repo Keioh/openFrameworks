@@ -18,6 +18,8 @@ public:
 	Object logo_o;
 	Object logo_p;
 
+	Object big_logo;
+
 	void setup(float pos_x = 0.0f, float pos_y = 0.0f, float alpha_speed = 255);
 	void update(float next_time_count = 0);
 	void draw(bool wire = false);

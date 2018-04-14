@@ -15,6 +15,8 @@ void LogoAnime::setup(float pos_x, float pos_y, float alpha_speed)
 	logo_o.setup(pos_x + 150, pos_y - 2, "graphics/logo/logo_o.png", alpha_blend_speed);
 	logo_i_2.setup(pos_x + 185, pos_y, "graphics/logo/logo_i.png", alpha_blend_speed);
 	logo_d.setup(pos_x + 213, pos_y - 4, "graphics/logo/logo_d_small.png", alpha_blend_speed);
+
+	big_logo.setup(pos_x, pos_y, "graphics/logo/Logo.png", alpha_blend_speed);
 }
 
 void LogoAnime::update(float next_time_count)
@@ -37,6 +39,8 @@ void LogoAnime::update(float next_time_count)
 		logo_o.alpha -= alpha_blend_speed * 2;
 		logo_p.alpha -= alpha_blend_speed * 2;
 
+		big_logo.alpha -= alpha_blend_speed * 2;
+
 		if (logo_D.alpha <= 0)
 		{
 			speed_x = 0.0f;//アニメーションのスピードを0.0fにする
@@ -56,10 +60,13 @@ void LogoAnime::update(float next_time_count)
 	logo_l.update(anime_x);
 	logo_o.update(anime_x);
 	logo_p.update(anime_x);
+
+	big_logo.update(anime_x);
 }
 
 void LogoAnime::draw(bool wire)
 {
+	/*
 	logo_D.draw(wire);
 	logo_d.draw(wire);
 	logo_i.draw(wire);
@@ -67,4 +74,7 @@ void LogoAnime::draw(bool wire)
 	logo_l.draw(wire);
 	logo_o.draw(wire);
 	logo_p.draw(wire);
+	*/
+
+	big_logo.draw(wire);
 }
