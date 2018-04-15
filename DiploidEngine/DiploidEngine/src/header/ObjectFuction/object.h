@@ -1,12 +1,15 @@
 //オブジェクトを作る際の基本となるクラス
 
 #pragma once
+#include <memory>
 #include "ImpactFuction/impact.h"
 
 
 class Object : public Impact
 {
 public:
+	Object() {};
+
 	ofImage graphics;//画像を扱うための変数を宣言
 	float position_x, position_y;//ポジション
 	float graphics_position_x, graphics_position_y;//画像ポジション

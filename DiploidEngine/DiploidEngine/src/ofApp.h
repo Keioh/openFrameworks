@@ -1,5 +1,5 @@
 #pragma once
-
+#include <memory>
 #include "ofMain.h"
 #include "GraphicsFunction\Graphics.h"
 #include "GameObject\logo_anime\logo_anime.h"

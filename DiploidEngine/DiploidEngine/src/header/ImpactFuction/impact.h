@@ -10,6 +10,8 @@ class Impact : public ofBaseApp
 {
 
 public:
+	Impact() {};
+
 	bool hit, click;//ヒット確認変数と、クリック確認変数
 	float position_x, position_y;//ポジション
 	float width, height;//大きさ
